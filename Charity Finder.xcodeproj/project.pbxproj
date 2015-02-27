@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		918E799F093A5286CE9969F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C06A02DAF5A53560484983 /* libPods.a */; };
+		DC27D4B41AA0F5A900826B77 /* CFMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27D4B31AA0F5A900826B77 /* CFMapView.m */; };
+		DC2C8F661A84B81A0069D1B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C8F651A84B81A0069D1B1 /* CoreLocation.framework */; };
+		DC72FDDE1AA097E70001C5EF /* CLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC72FDDD1AA097E70001C5EF /* CLDetailViewController.m */; };
+		DC8547561A85025E00A6D039 /* CFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8547501A85025E00A6D039 /* CFAppDelegate.m */; };
+		DC8547571A85025E00A6D039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8547511A85025E00A6D039 /* Images.xcassets */; };
+		DC8547581A85025E00A6D039 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC8547521A85025E00A6D039 /* Info.plist */; };
+		DC8547591A85025E00A6D039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8547531A85025E00A6D039 /* main.m */; };
+		DC85475E1A85026B00A6D039 /* CFListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85475B1A85026B00A6D039 /* CFListViewController.m */; };
+		DC85475F1A85026B00A6D039 /* CFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85475D1A85026B00A6D039 /* CFMapViewController.m */; };
+		DC8547911A85171300A6D039 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8547901A85171300A6D039 /* MobileCoreServices.framework */; };
+		DC8547931A851C4F00A6D039 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC8547921A851C4F00A6D039 /* SystemConfiguration.framework */; };
+		DC85B75F1AA06A2D009935C1 /* Charity Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC85B75D1AA06A2D009935C1 /* Charity Finder.xcdatamodeld */; };
+		DC85B7621AA06ACF009935C1 /* Charity.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85B7611AA06ACF009935C1 /* Charity.m */; };
+		DCAE47D71AA061B000720C40 /* CFClient.m in Sources */ = {isa = PBXBuildFile; fileRef = DCAE47D61AA061B000720C40 /* CFClient.m */; };
+		DCAE47D91AA0624A00720C40 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAE47D81AA0624A00720C40 /* MapKit.framework */; };
+		DCAE47DB1AA0628100720C40 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAE47DA1AA0628100720C40 /* LaunchScreen.xib */; };
+		DCAE47DD1AA0628500720C40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAE47DC1AA0628500720C40 /* Main.storyboard */; };
+		DCAE47DF1AA0651200720C40 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAE47DE1AA0651200720C40 /* CoreData.framework */; };
+		DCAE47E11AA0656400720C40 /* Charity Finder-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = DCAE47E01AA0653300720C40 /* Charity Finder-Prefix.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1E31305CDBD40D7A18A01466 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		37C06A02DAF5A53560484983 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC27D4B21AA0F5A900826B77 /* CFMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFMapView.h; path = Views/CFMapView.h; sourceTree = "<group>"; };
+		DC27D4B31AA0F5A900826B77 /* CFMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFMapView.m; path = Views/CFMapView.m; sourceTree = "<group>"; };
+		DC2C8F651A84B81A0069D1B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC72FDDC1AA097E70001C5EF /* CLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLDetailViewController.h; path = "View Controllers/CLDetailViewController.h"; sourceTree = SOURCE_ROOT; };
+		DC72FDDD1AA097E70001C5EF /* CLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLDetailViewController.m; path = "View Controllers/CLDetailViewController.m"; sourceTree = SOURCE_ROOT; };
+		DC85474F1A85025E00A6D039 /* CFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFAppDelegate.h; path = "Charity Finder/CFAppDelegate.h"; sourceTree = SOURCE_ROOT; };
+		DC8547501A85025E00A6D039 /* CFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFAppDelegate.m; path = "Charity Finder/CFAppDelegate.m"; sourceTree = SOURCE_ROOT; };
+		DC8547511A85025E00A6D039 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Charity Finder/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		DC8547521A85025E00A6D039 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Charity Finder/Info.plist"; sourceTree = SOURCE_ROOT; };
+		DC8547531A85025E00A6D039 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "Charity Finder/main.m"; sourceTree = SOURCE_ROOT; };
+		DC85475A1A85026B00A6D039 /* CFListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFListViewController.h; path = "View Controllers/CFListViewController.h"; sourceTree = SOURCE_ROOT; };
+		DC85475B1A85026B00A6D039 /* CFListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFListViewController.m; path = "View Controllers/CFListViewController.m"; sourceTree = SOURCE_ROOT; };
+		DC85475C1A85026B00A6D039 /* CFMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFMapViewController.h; path = "View Controllers/CFMapViewController.h"; sourceTree = SOURCE_ROOT; };
+		DC85475D1A85026B00A6D039 /* CFMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFMapViewController.m; path = "View Controllers/CFMapViewController.m"; sourceTree = SOURCE_ROOT; };
+		DC8547901A85171300A6D039 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		DC8547921A851C4F00A6D039 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DC85B75E1AA06A2D009935C1 /* Charity Finder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Charity Finder.xcdatamodel"; sourceTree = "<group>"; };
+		DC85B7601AA06ACF009935C1 /* Charity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Charity.h; path = Classes/Charity.h; sourceTree = "<group>"; };
+		DC85B7611AA06ACF009935C1 /* Charity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Charity.m; path = Classes/Charity.m; sourceTree = "<group>"; };
+		DCAE47D51AA061B000720C40 /* CFClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFClient.h; path = Classes/CFClient.h; sourceTree = "<group>"; };
+		DCAE47D61AA061B000720C40 /* CFClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFClient.m; path = Classes/CFClient.m; sourceTree = "<group>"; };
+		DCAE47D81AA0624A00720C40 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		DCAE47DA1AA0628100720C40 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = "Charity Finder/LaunchScreen.xib"; sourceTree = SOURCE_ROOT; };
+		DCAE47DC1AA0628500720C40 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "Charity Finder/Main.storyboard"; sourceTree = SOURCE_ROOT; };
+		DCAE47DE1AA0651200720C40 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DCAE47E01AA0653300720C40 /* Charity Finder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Charity Finder-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		DCC6060F1A844E2F00DE0372 /* Charity Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charity Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCD40BF89AA263BE4E680366 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCC6060C1A844E2F00DE0372 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCAE47DF1AA0651200720C40 /* CoreData.framework in Frameworks */,
+				DCAE47D91AA0624A00720C40 /* MapKit.framework in Frameworks */,
+				DC8547931A851C4F00A6D039 /* SystemConfiguration.framework in Frameworks */,
+				DC8547911A85171300A6D039 /* MobileCoreServices.framework in Frameworks */,
+				DC2C8F661A84B81A0069D1B1 /* CoreLocation.framework in Frameworks */,
+				918E799F093A5286CE9969F4 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DC2C8F611A84B7310069D1B1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC85475A1A85026B00A6D039 /* CFListViewController.h */,
+				DC85475B1A85026B00A6D039 /* CFListViewController.m */,
+				DC85475C1A85026B00A6D039 /* CFMapViewController.h */,
+				DC85475D1A85026B00A6D039 /* CFMapViewController.m */,
+				DC72FDDC1AA097E70001C5EF /* CLDetailViewController.h */,
+				DC72FDDD1AA097E70001C5EF /* CLDetailViewController.m */,
+			);
+			name = "View Controllers";
+			path = "Charity Locator";
+			sourceTree = "<group>";
+		};
+		DC2C8F641A84B7690069D1B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCAE47DE1AA0651200720C40 /* CoreData.framework */,
+				DCAE47D81AA0624A00720C40 /* MapKit.framework */,
+				DC8547921A851C4F00A6D039 /* SystemConfiguration.framework */,
+				DC8547901A85171300A6D039 /* MobileCoreServices.framework */,
+				DC2C8F651A84B81A0069D1B1 /* CoreLocation.framework */,
+				37C06A02DAF5A53560484983 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC8547941A85433A00A6D039 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DC85B7601AA06ACF009935C1 /* Charity.h */,
+				DC85B7611AA06ACF009935C1 /* Charity.m */,
+				DCAE47D51AA061B000720C40 /* CFClient.h */,
+				DCAE47D61AA061B000720C40 /* CFClient.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		DC85B7651AA073A1009935C1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC27D4B21AA0F5A900826B77 /* CFMapView.h */,
+				DC27D4B31AA0F5A900826B77 /* CFMapView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		DCC606061A844E2F00DE0372 = {
+			isa = PBXGroup;
+			children = (
+				DC85B75D1AA06A2D009935C1 /* Charity Finder.xcdatamodeld */,
+				DCC606111A844E2F00DE0372 /* Charity Finder */,
+				DC2C8F611A84B7310069D1B1 /* View Controllers */,
+				DC85B7651AA073A1009935C1 /* Views */,
+				DC8547941A85433A00A6D039 /* Classes */,
+				DC2C8F641A84B7690069D1B1 /* Frameworks */,
+				DCC606101A844E2F00DE0372 /* Products */,
+				DED6AFC89C84AC3B4EB6F7D9 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		DCC606101A844E2F00DE0372 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCC6060F1A844E2F00DE0372 /* Charity Finder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCC606111A844E2F00DE0372 /* Charity Finder */ = {
+			isa = PBXGroup;
+			children = (
+				DCAE47DC1AA0628500720C40 /* Main.storyboard */,
+				DCAE47DA1AA0628100720C40 /* LaunchScreen.xib */,
+				DC85474F1A85025E00A6D039 /* CFAppDelegate.h */,
+				DC8547501A85025E00A6D039 /* CFAppDelegate.m */,
+				DC8547511A85025E00A6D039 /* Images.xcassets */,
+				DC8547521A85025E00A6D039 /* Info.plist */,
+				DC8547531A85025E00A6D039 /* main.m */,
+				DCAE47E01AA0653300720C40 /* Charity Finder-Prefix.pch */,
+			);
+			name = "Charity Finder";
+			path = "Charity Locator";
+			sourceTree = "<group>";
+		};
+		DED6AFC89C84AC3B4EB6F7D9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCD40BF89AA263BE4E680366 /* Pods.debug.xcconfig */,
+				1E31305CDBD40D7A18A01466 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCC6060E1A844E2F00DE0372 /* Charity Finder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC606351A844E2F00DE0372 /* Build configuration list for PBXNativeTarget "Charity Finder" */;
+			buildPhases = (
+				CBF5C98F8A62DAA5FAA7C4C7 /* Check Pods Manifest.lock */,
+				DCC6060B1A844E2F00DE0372 /* Sources */,
+				DCC6060C1A844E2F00DE0372 /* Frameworks */,
+				DCC6060D1A844E2F00DE0372 /* Resources */,
+				CA582164B0A41C2EEDE01184 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Charity Finder";
+			productName = "Charity Locator";
+			productReference = DCC6060F1A844E2F00DE0372 /* Charity Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCC606071A844E2F00DE0372 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Biscuit Labs, LLC";
+				TargetAttributes = {
+					DCC6060E1A844E2F00DE0372 = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Y62QLUGWZC;
+					};
+				};
+			};
+			buildConfigurationList = DCC6060A1A844E2F00DE0372 /* Build configuration list for PBXProject "Charity Finder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCC606061A844E2F00DE0372;
+			productRefGroup = DCC606101A844E2F00DE0372 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCC6060E1A844E2F00DE0372 /* Charity Finder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCC6060D1A844E2F00DE0372 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC8547581A85025E00A6D039 /* Info.plist in Resources */,
+				DCAE47DB1AA0628100720C40 /* LaunchScreen.xib in Resources */,
+				DC8547571A85025E00A6D039 /* Images.xcassets in Resources */,
+				DCAE47DD1AA0628500720C40 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		CA582164B0A41C2EEDE01184 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CBF5C98F8A62DAA5FAA7C4C7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCC6060B1A844E2F00DE0372 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC85B7621AA06ACF009935C1 /* Charity.m in Sources */,
+				DCAE47E11AA0656400720C40 /* Charity Finder-Prefix.pch in Sources */,
+				DC72FDDE1AA097E70001C5EF /* CLDetailViewController.m in Sources */,
+				DC85B75F1AA06A2D009935C1 /* Charity Finder.xcdatamodeld in Sources */,
+				DC85475E1A85026B00A6D039 /* CFListViewController.m in Sources */,
+				DC8547561A85025E00A6D039 /* CFAppDelegate.m in Sources */,
+				DCAE47D71AA061B000720C40 /* CFClient.m in Sources */,
+				DC85475F1A85026B00A6D039 /* CFMapViewController.m in Sources */,
+				DC27D4B41AA0F5A900826B77 /* CFMapView.m in Sources */,
+				DC8547591A85025E00A6D039 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		DCC606331A844E2F00DE0372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DCC606341A844E2F00DE0372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCC606361A844E2F00DE0372 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCD40BF89AA263BE4E680366 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/libs/WhirlyGlobeMaply/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Charity Finder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Charity Finder";
+			};
+			name = Debug;
+		};
+		DCC606371A844E2F00DE0372 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E31305CDBD40D7A18A01466 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"\"$(SRCROOT)/libs/WhirlyGlobeMaply/WhirlyGlobeSrc/WhirlyGlobe-MaplyComponent/include/\"",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Charity Finder/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "Charity Finder";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCC6060A1A844E2F00DE0372 /* Build configuration list for PBXProject "Charity Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC606331A844E2F00DE0372 /* Debug */,
+				DCC606341A844E2F00DE0372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCC606351A844E2F00DE0372 /* Build configuration list for PBXNativeTarget "Charity Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC606361A844E2F00DE0372 /* Debug */,
+				DCC606371A844E2F00DE0372 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DC85B75D1AA06A2D009935C1 /* Charity Finder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DC85B75E1AA06A2D009935C1 /* Charity Finder.xcdatamodel */,
+			);
+			currentVersion = DC85B75E1AA06A2D009935C1 /* Charity Finder.xcdatamodel */;
+			path = "Charity Finder.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DCC606071A844E2F00DE0372 /* Project object */;
+}
