@@ -11,12 +11,17 @@
 #import <DATAStack.h>
 #import "Charity.h"
 #import "CFClient.h"
+#import "CFSearchResultsViewController.h"
+#import <UIScrollView+InfiniteScroll.h>
 
-@interface CFListViewController () <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface CFListViewController () <UISearchBarDelegate, UISearchDisplayDelegate, UISearchResultsUpdating>
 
 @property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, strong) DATASource *dataSource;
 @property (nonatomic, strong) DATAStack *dataStack;
+@property (nonatomic, strong) DATASource *dataSource;
+
+// Search controller/results
+@property (nonatomic, strong) UISearchController *searchController;
 
 @end
 
@@ -34,6 +39,45 @@
     // Setup table
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"CFCharityTableCell"];
     self.tableView.dataSource = self.dataSource;
+    
+    // The table view controller is in a nav controller, and so the containing nav controller is the 'search results controller'
+    UINavigationController *searchResultsController = [[self storyboard] instantiateViewControllerWithIdentifier:@"CFSearchResultsViewController"];
+    
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
+    
+    self.searchController.searchResultsUpdater = self;
+    
+    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+
+
+    // Infinite scroll indicator style
+//    self.tableView.infiniteScrollIndicatorStyle = UIActivityIndicatorViewStyleGray;
+//    
+//    // Setup infinite scroll
+//    [self.tableView addInfiniteScrollWithHandler:^(UITableView* tableView) {
+//        // Fetch more charities
+//        [[CFClient sharedInstance] downloadCharityDataAtStart:[tableView numberOfRowsInSection:0] count:200 completion:^(NSError *error) {
+//            if (error) {
+//                
+//            } else {
+//                
+//            }
+//        }];
+//        
+//        // finish infinite scroll animation
+//        [tableView finishInfiniteScroll];
+//    }];
+//    
+//    // Initial sync
+//    [[CFClient sharedInstance] downloadCharityDataAtStart:0 count:200 completion:^(NSError *error) {
+//        if (error) {
+//            
+//        } else {
+//            
+//        }
+//    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,34 +87,34 @@
 
 #pragma mark - Search bar
 
-- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    if ([searchText length] == 0) {
-        [[[_dataSource fetchedResultsController] fetchRequest] setFetchLimit:0];
-    } else {
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains[cd] %@", searchText];
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
+    NSString *searchString = [self.searchController.searchBar text];
+    
+    NSString *scope = nil;
+    
+//    NSInteger selectedScopeButtonIndex = [self.searchController.searchBar selectedScopeButtonIndex];
+//    if (selectedScopeButtonIndex > 0) {
+//        scope = [[Product deviceTypeNames] objectAtIndex:(selectedScopeButtonIndex - 1)];
+//    }
+//    
+//    [self updateFilteredContentForProductName:searchString type:scope];
+    
+    if (self.searchController.searchResultsController) {
+        UINavigationController *navController = (UINavigationController *)self.searchController.searchResultsController;
         
-        [[[_dataSource fetchedResultsController] fetchRequest] setPredicate:predicate];
-        [[[_dataSource fetchedResultsController] fetchRequest] setFetchLimit:50];
+        CFSearchResultsViewController *vc = (CFSearchResultsViewController *)navController.topViewController;
+        vc.searchResults = self.searchResults;
+        [vc.tableView reloadData];
     }
     
-    NSError *error;
-    if (![[_dataSource fetchedResultsController] performFetch:&error]) {
-        NSLog(@"Error: %@", error);
-    }
-    
-    [self.tableView reloadData];
 }
 
-- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
-}
+#pragma mark - UISearchBarDelegate
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
-}
-
-- (void)searchBarResultsListButtonClicked:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
+// Workaround for bug: -updateSearchResultsForSearchController: is not called when scope buttons change
+- (void)searchBar:(UISearchBar *)searchBar selectedScopeButtonIndexDidChange:(NSInteger)selectedScope {
+    [self updateSearchResultsForSearchController:self.searchController];
 }
 
 #pragma mark - Lazy initialization
@@ -96,15 +140,5 @@
 }
 
 #pragma mark - Actions
-
-- (void)startCharitySync {
-    [[CFClient sharedInstance] downloadCharityData:^(NSError *error) {
-        if (error) {
-            
-        } else {
-            
-        }
-    }];
-}
 
 @end

@@ -10,10 +10,11 @@
 		918E799F093A5286CE9969F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 37C06A02DAF5A53560484983 /* libPods.a */; };
 		DC27D4B41AA0F5A900826B77 /* CFMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC27D4B31AA0F5A900826B77 /* CFMapView.m */; };
 		DC2C8F661A84B81A0069D1B1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2C8F651A84B81A0069D1B1 /* CoreLocation.framework */; };
-		DC72FDDE1AA097E70001C5EF /* CLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC72FDDD1AA097E70001C5EF /* CLDetailViewController.m */; };
+		DC72FDDE1AA097E70001C5EF /* CFDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC72FDDD1AA097E70001C5EF /* CFDetailViewController.m */; };
+		DC8415781AA4FBA7001542B9 /* CFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8415771AA4FBA7001542B9 /* CFAboutViewController.m */; };
+		DC84157B1AA4FE11001542B9 /* CFSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC84157A1AA4FE11001542B9 /* CFSearchResultsViewController.m */; };
 		DC8547561A85025E00A6D039 /* CFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8547501A85025E00A6D039 /* CFAppDelegate.m */; };
 		DC8547571A85025E00A6D039 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8547511A85025E00A6D039 /* Images.xcassets */; };
-		DC8547581A85025E00A6D039 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC8547521A85025E00A6D039 /* Info.plist */; };
 		DC8547591A85025E00A6D039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8547531A85025E00A6D039 /* main.m */; };
 		DC85475E1A85026B00A6D039 /* CFListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85475B1A85026B00A6D039 /* CFListViewController.m */; };
 		DC85475F1A85026B00A6D039 /* CFMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DC85475D1A85026B00A6D039 /* CFMapViewController.m */; };
@@ -27,6 +28,8 @@
 		DCAE47DD1AA0628500720C40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCAE47DC1AA0628500720C40 /* Main.storyboard */; };
 		DCAE47DF1AA0651200720C40 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCAE47DE1AA0651200720C40 /* CoreData.framework */; };
 		DCAE47E11AA0656400720C40 /* Charity Finder-Prefix.pch in Sources */ = {isa = PBXBuildFile; fileRef = DCAE47E01AA0653300720C40 /* Charity Finder-Prefix.pch */; };
+		DCF298001AA10544007473E9 /* CFAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = DCF297FF1AA10544007473E9 /* CFAnnotation.m */; };
+		DCF298041AA109D5007473E9 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCF298031AA109D5007473E9 /* Pods-acknowledgements.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +38,12 @@
 		DC27D4B21AA0F5A900826B77 /* CFMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFMapView.h; path = Views/CFMapView.h; sourceTree = "<group>"; };
 		DC27D4B31AA0F5A900826B77 /* CFMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFMapView.m; path = Views/CFMapView.m; sourceTree = "<group>"; };
 		DC2C8F651A84B81A0069D1B1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		DC72FDDC1AA097E70001C5EF /* CLDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CLDetailViewController.h; path = "View Controllers/CLDetailViewController.h"; sourceTree = SOURCE_ROOT; };
-		DC72FDDD1AA097E70001C5EF /* CLDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CLDetailViewController.m; path = "View Controllers/CLDetailViewController.m"; sourceTree = SOURCE_ROOT; };
+		DC72FDDC1AA097E70001C5EF /* CFDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFDetailViewController.h; path = "View Controllers/CFDetailViewController.h"; sourceTree = SOURCE_ROOT; };
+		DC72FDDD1AA097E70001C5EF /* CFDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFDetailViewController.m; path = "View Controllers/CFDetailViewController.m"; sourceTree = SOURCE_ROOT; };
+		DC8415761AA4FBA7001542B9 /* CFAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFAboutViewController.h; path = "View Controllers/CFAboutViewController.h"; sourceTree = SOURCE_ROOT; };
+		DC8415771AA4FBA7001542B9 /* CFAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFAboutViewController.m; path = "View Controllers/CFAboutViewController.m"; sourceTree = SOURCE_ROOT; };
+		DC8415791AA4FE11001542B9 /* CFSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFSearchResultsViewController.h; path = "View Controllers/CFSearchResultsViewController.h"; sourceTree = SOURCE_ROOT; };
+		DC84157A1AA4FE11001542B9 /* CFSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFSearchResultsViewController.m; path = "View Controllers/CFSearchResultsViewController.m"; sourceTree = SOURCE_ROOT; };
 		DC85474F1A85025E00A6D039 /* CFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFAppDelegate.h; path = "Charity Finder/CFAppDelegate.h"; sourceTree = SOURCE_ROOT; };
 		DC8547501A85025E00A6D039 /* CFAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFAppDelegate.m; path = "Charity Finder/CFAppDelegate.m"; sourceTree = SOURCE_ROOT; };
 		DC8547511A85025E00A6D039 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Charity Finder/Images.xcassets"; sourceTree = SOURCE_ROOT; };
@@ -60,6 +67,9 @@
 		DCAE47E01AA0653300720C40 /* Charity Finder-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Charity Finder-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		DCC6060F1A844E2F00DE0372 /* Charity Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Charity Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD40BF89AA263BE4E680366 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DCF297FE1AA10544007473E9 /* CFAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CFAnnotation.h; path = Classes/CFAnnotation.h; sourceTree = "<group>"; };
+		DCF297FF1AA10544007473E9 /* CFAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CFAnnotation.m; path = Classes/CFAnnotation.m; sourceTree = "<group>"; };
+		DCF298031AA109D5007473E9 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods/Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +96,12 @@
 				DC85475B1A85026B00A6D039 /* CFListViewController.m */,
 				DC85475C1A85026B00A6D039 /* CFMapViewController.h */,
 				DC85475D1A85026B00A6D039 /* CFMapViewController.m */,
-				DC72FDDC1AA097E70001C5EF /* CLDetailViewController.h */,
-				DC72FDDD1AA097E70001C5EF /* CLDetailViewController.m */,
+				DC72FDDC1AA097E70001C5EF /* CFDetailViewController.h */,
+				DC72FDDD1AA097E70001C5EF /* CFDetailViewController.m */,
+				DC8415761AA4FBA7001542B9 /* CFAboutViewController.h */,
+				DC8415771AA4FBA7001542B9 /* CFAboutViewController.m */,
+				DC8415791AA4FE11001542B9 /* CFSearchResultsViewController.h */,
+				DC84157A1AA4FE11001542B9 /* CFSearchResultsViewController.m */,
 			);
 			name = "View Controllers";
 			path = "Charity Locator";
@@ -113,6 +127,8 @@
 				DC85B7611AA06ACF009935C1 /* Charity.m */,
 				DCAE47D51AA061B000720C40 /* CFClient.h */,
 				DCAE47D61AA061B000720C40 /* CFClient.m */,
+				DCF297FE1AA10544007473E9 /* CFAnnotation.h */,
+				DCF297FF1AA10544007473E9 /* CFAnnotation.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -167,6 +183,7 @@
 		DED6AFC89C84AC3B4EB6F7D9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				DCF298031AA109D5007473E9 /* Pods-acknowledgements.plist */,
 				DCD40BF89AA263BE4E680366 /* Pods.debug.xcconfig */,
 				1E31305CDBD40D7A18A01466 /* Pods.release.xcconfig */,
 			);
@@ -233,9 +250,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC8547581A85025E00A6D039 /* Info.plist in Resources */,
 				DCAE47DB1AA0628100720C40 /* LaunchScreen.xib in Resources */,
 				DC8547571A85025E00A6D039 /* Images.xcassets in Resources */,
+				DCF298041AA109D5007473E9 /* Pods-acknowledgements.plist in Resources */,
 				DCAE47DD1AA0628500720C40 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,13 +299,16 @@
 			files = (
 				DC85B7621AA06ACF009935C1 /* Charity.m in Sources */,
 				DCAE47E11AA0656400720C40 /* Charity Finder-Prefix.pch in Sources */,
-				DC72FDDE1AA097E70001C5EF /* CLDetailViewController.m in Sources */,
+				DC72FDDE1AA097E70001C5EF /* CFDetailViewController.m in Sources */,
 				DC85B75F1AA06A2D009935C1 /* Charity Finder.xcdatamodeld in Sources */,
 				DC85475E1A85026B00A6D039 /* CFListViewController.m in Sources */,
 				DC8547561A85025E00A6D039 /* CFAppDelegate.m in Sources */,
 				DCAE47D71AA061B000720C40 /* CFClient.m in Sources */,
+				DC8415781AA4FBA7001542B9 /* CFAboutViewController.m in Sources */,
 				DC85475F1A85026B00A6D039 /* CFMapViewController.m in Sources */,
 				DC27D4B41AA0F5A900826B77 /* CFMapView.m in Sources */,
+				DCF298001AA10544007473E9 /* CFAnnotation.m in Sources */,
+				DC84157B1AA4FE11001542B9 /* CFSearchResultsViewController.m in Sources */,
 				DC8547591A85025E00A6D039 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

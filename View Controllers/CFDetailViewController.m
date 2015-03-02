@@ -1,18 +1,18 @@
 //
-//  CLDetailViewController.m
+//  CFDetailViewController.m
 //  Charity Finder
 //
 //  Created by Michael Thomas on 2/27/15.
 //  Copyright (c) 2015 Biscuit Labs, LLC. All rights reserved.
 //
 
-#import "CLDetailViewController.h"
+#import "CFDetailViewController.h"
 
-@interface CLDetailViewController ()
+@interface CFDetailViewController ()
 
 @end
 
-@implementation CLDetailViewController
+@implementation CFDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

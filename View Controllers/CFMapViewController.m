@@ -8,12 +8,15 @@
 
 #import "CFMapViewController.h"
 #import "CFClient.h"
+#import "Charity.h"
 #import "CFMapView.h"
 #import <CoreLocation/CoreLocation.h>
 #import <MBXMapKit/MBXMapKit.h>
 
-@interface CFMapViewController () <MKMapViewDelegate, MBXRasterTileOverlayDelegate, CLLocationManagerDelegate>
+@interface CFMapViewController () <MKMapViewDelegate, MBXRasterTileOverlayDelegate, CLLocationManagerDelegate, NSFetchedResultsControllerDelegate>
 
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) DATAStack *dataStack;
 @property (nonatomic, weak) IBOutlet CFMapView *mapView;
 @property (nonatomic, strong) MBXRasterTileOverlay *rasterOverlay;
 @property (nonatomic, strong) CLLocationManager *locationManager;
@@ -28,13 +31,58 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    // Setup Map
+    // Setup backend
+    _dataStack = [[CFClient sharedInstance] dataStack];
+    
+    // Setup map
     [self setupMap];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - CoreData
+
+- (void)controller:(NSFetchedResultsController *)controller
+   didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath
+     forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath
+{
+    switch (type) {
+        case NSFetchedResultsChangeInsert:
+            [self fetchedResultsChangeInsert:anObject];
+            break;
+        case NSFetchedResultsChangeDelete:
+            [self fetchedResultsChangeDelete:anObject];
+            break;
+        case NSFetchedResultsChangeUpdate:
+            [self fetchedResultsChangeUpdate:anObject];
+            break;
+        case NSFetchedResultsChangeMove:
+            // do nothing
+            break;
+            
+        default:
+            break;
+    }
+}
+
+- (void)fetchedResultsChangeInsert:(Charity *)charity {
+    NSLog(@"INSERT!");
+//    [self.mapView addAnnotation:charity];
+}
+
+- (void)fetchedResultsChangeDelete:(Charity *)familyMember {
+    NSLog(@"DELETE!");
+//    [self.mapView removeAnnotation:charity];
+}
+
+- (void)fetchedResultsChangeUpdate:(Charity *)charity {
+    [self fetchedResultsChangeDelete:charity];
+    [self fetchedResultsChangeInsert:charity];
 }
 
 #pragma mark - CFMapView Methods
@@ -56,7 +104,8 @@
     _rasterOverlay.delegate = self;
     
     [_mapView addOverlay:_rasterOverlay];
-    NSLog(@"Raster layer online!");
+    
+    [self fetchedResultsController];
 }
 
 #pragma mark - MKMapViewDelegate protocol implementation
@@ -99,6 +148,50 @@
 }
 
 #pragma mark - Lazy initialization
+
+- (NSFetchedResultsController *)fetchedResultsController {
+    if (_fetchedResultsController) {
+        return _fetchedResultsController;
+    }
+    
+    NSFetchedResultsController *frc = nil;
+    
+    if (self.dataStack) {
+        NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Charity"];
+        
+        // TODO - add predicate for current map bounding box.
+        NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+        [request setSortDescriptors:@[sortDescriptor]];
+        
+        NSManagedObjectContext *moc = self.dataStack.mainContext;
+        
+        frc = [[NSFetchedResultsController alloc] initWithFetchRequest:request managedObjectContext:moc sectionNameKeyPath:nil cacheName:nil];
+        [frc setDelegate:self];
+        
+        _fetchedResultsController = frc;
+        
+        NSError *error = nil;
+        [_fetchedResultsController performFetch:&error];
+        
+        [self loadAnnotations];
+    }
+    
+    return _fetchedResultsController;
+}
+
+// TODO - replace this with quad tree clustering
+- (void)loadAnnotations {
+    // Remove old annotations
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    // Create annotations for charities
+    NSMutableArray *annotations = [NSMutableArray new];
+    for (Charity *c in [self.fetchedResultsController fetchedObjects]) {
+        
+    }
+    
+    [self.mapView addAnnotations:annotations];
+}
 
 - (CLLocationManager *)locationManager {
     if (_locationManager) {

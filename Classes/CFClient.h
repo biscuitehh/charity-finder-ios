@@ -13,6 +13,6 @@
 
 + (id)sharedInstance;
 + (void)startWithDataStack:(DATAStack *)dataStack;
-- (void)downloadCharityData:(void (^)(NSError *error))completion;
+- (void)downloadCharityDataAtStart:(NSInteger)start count:(NSInteger)count completion:(void (^)(NSError *error))completion;
 
 @end

@@ -35,15 +35,11 @@ static NSString * const kBaseURL = @"http://charity.biscuitlabs.com/api/v1";
 
 + (void)startWithDataStack:(DATAStack *)dataStack {
     [[CFClient sharedInstance] setDataStack:dataStack];
-    
-    [[CFClient sharedInstance] downloadCharityData:^(NSError *error) {
-        NSLog(@"Sync complete!");
-    }];
 }
 
 #pragma mark - Syncing & network
 
-- (void)downloadCharityData:(void (^)(NSError *error))completion {
+- (void)downloadCharityDataAtStart:(NSInteger)start count:(NSInteger)count completion:(void (^)(NSError *error))completion {
     NSLog(@"Starting charity sync!");
     
     // Get last sync, if there is one
@@ -51,12 +47,14 @@ static NSString * const kBaseURL = @"http://charity.biscuitlabs.com/api/v1";
     NSDictionary *params;
     
     if (lastUpdated != nil) {
-        params = @{@"last_updated": lastUpdated};
+        params = @{@"last_updated": lastUpdated,
+                   @"start": [NSString stringWithFormat:@"%li", (long)start],
+                   @"count": [NSString stringWithFormat:@"%li", (long)count]};
     } else {
-        params = @{@"last_updated": @""};
-    }
+        params = @{@"start": [NSString stringWithFormat:@"%li", (long)start],
+                   @"count": [NSString stringWithFormat:@"%li", (long)count]};    }
     
-    [self.httpManager GET:@"charities" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self.httpManager GET:@"charities" parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
         NSArray *charities = (NSArray *)(NSDictionary *)responseObject[@"charities"];
         

@@ -1,5 +1,5 @@
 //
-//  CLDetailViewController.h
+//  CFDetailViewController.h
 //  Charity Finder
 //
 //  Created by Michael Thomas on 2/27/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CLDetailViewController : UIViewController
+@interface CFDetailViewController : UIViewController
 
 @end
