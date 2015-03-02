@@ -44,14 +44,8 @@
     UINavigationController *searchResultsController = [[self storyboard] instantiateViewControllerWithIdentifier:@"CFSearchResultsViewController"];
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:searchResultsController];
-    
     self.searchController.searchResultsUpdater = self;
     
-    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
-    
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-
-
     // Infinite scroll indicator style
 //    self.tableView.infiniteScrollIndicatorStyle = UIActivityIndicatorViewStyleGray;
 //    
@@ -140,5 +134,12 @@
 }
 
 #pragma mark - Actions
+
+- (IBAction)searchButtonAction:(id)sender {
+    [self presentViewController:self.searchController animated:YES completion:nil];
+    //    self.searchController.searchBar.frame = CGRectMake(self.searchController.searchBar.frame.origin.x, self.searchController.searchBar.frame.origin.y, self.searchController.searchBar.frame.size.width, 44.0);
+//    
+//    self.tableView.tableHeaderView = self.searchController.searchBar;
+}
 
 @end

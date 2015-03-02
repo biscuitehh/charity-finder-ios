@@ -13,5 +13,7 @@
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *searchResults;
 
+- (IBAction)searchButtonAction:(id)sender;
+
 @end
 

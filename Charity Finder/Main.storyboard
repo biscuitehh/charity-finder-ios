@@ -150,13 +150,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="H9o-Ur-mvY">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CFAboutCell" id="NcV-FK-23c">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H9o-Ur-mvY" id="oam-h2-g3V">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NcV-FK-23c" id="TcF-FF-eSl">
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="8BZ-K8-DKE" id="Ljc-Sq-ZYe"/>
                             <outlet property="delegate" destination="8BZ-K8-DKE" id="xdM-Ya-dzN"/>
@@ -199,8 +201,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Charities" image="list_tab" id="cPa-gy-q4n"/>
                     <navigationItem key="navigationItem" title="Charities" id="0zU-CF-6z0">
-                        <barButtonItem key="leftBarButtonItem" image="search_icon" id="dZR-RS-9Ey"/>
-                        <barButtonItem key="rightBarButtonItem" image="download_icon" id="8VQ-k0-wGx"/>
+                        <barButtonItem key="rightBarButtonItem" image="search_icon" id="dZR-RS-9Ey">
+                            <connections>
+                                <action selector="searchButtonAction:" destination="8rJ-Kc-sve" id="c4o-in-PrC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zLf-Sc-pNu" id="Rca-LG-MoU"/>
@@ -250,7 +255,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="download_icon" width="25" height="25"/>
         <image name="help_tab" width="25" height="25"/>
         <image name="list_tab" width="25" height="25"/>
         <image name="location_icon" width="25" height="25"/>
